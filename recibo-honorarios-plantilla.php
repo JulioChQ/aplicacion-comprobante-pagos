@@ -31,107 +31,107 @@
          <div class="col-xs-5 text-center numero">
             <h4>R.U.C. 10123456789</h4>
             <h4>RECIBO POR HONORARIOS ELECTRÓNICO</h4>
-            <h4>Nro: E001-01</h4>
+            <h4>Nro: E001-32</h4>
          </div>
       </div><br>
       <div class="row contenido">
          <div class="row">
-            <div class="col-xs-3">
-               <p><b>Recibí de:</b></p>
+            <div class="col-xs-2">
+               <p>Recibí de:</p>
             </div>
 
-            <div class="col-xs-9">
-               <p><?=$razonSocial?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Identificado con:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$tipoDoc?></p>
+            <div class="col-xs-10">
+               <p>Juan Pedro lopez mamani</p>
             </div>
          </div>
 
          <div class="row">
-            <div class="col-xs-3">
-               <p><b>Número:</b></p>
+            <div class="col-xs-2">
+               <p>Identificado con:</p>
             </div>
 
-            <div class="col-xs-9">
-               <p><?=$numDoc?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Domicilio Fiscal del usuario:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p>CAL. ASTURIAS NRO. 105 LIMA - LIMA - PUEBLO LIBRE</p>
+            <div class="col-xs-10">
+               <p>RUC</p>
             </div>
          </div>
 
          <div class="row">
-            <div class="col-xs-3">
-               <p><b>Forma de Pago:</b></p>
+            <div class="col-xs-2">
+               <p>Número:</p>
             </div>
 
-            <div class="col-xs-9">
-               <p><?=$formaPago?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>La suma de:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$textoMontoTotal?></p>
+            <div class="col-xs-10">
+               <p>10123456789</p>
             </div>
          </div>
 
          <div class="row">
-            <div class="col-xs-3">
-               <p><b>Por concepto de:</b></p>
+            <div class="col-xs-2">
+               <p>Domicilio Fiscal del usuario:</p>
             </div>
 
-            <div class="col-xs-9">
-               <p><?=$descripcion?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Observación:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$observacion?></p>
+            <div class="col-xs-10">
+               <p>Calles Asturias nro 105 LIMA-LIMA-PUEBLO LIBRE</p>
             </div>
          </div>
 
          <div class="row">
-            <div class="col-xs-3">
-               <p><b>Inciso:</b></p>
+            <div class="col-xs-2">
+               <p>Forma de Pago:</p>
             </div>
 
-            <div class="col-xs-9">
-               <p><?=$tipoRenta?></p>
+            <div class="col-xs-10">
+               <p>Al Crédito</p>
             </div>
          </div>
 
          <div class="row">
-            <div class="col-xs-3">
-               <p><b>Fecha de emisión:</b></p>
+            <div class="col-xs-2">
+               <p>La suma de:</p>
             </div>
 
-            <div class="col-xs-9">
-               <p><?=date("d",strtotime($fechaEmision))?> de <?=strftime("%B",strtotime($fechaEmision))?> del <?=date("Y",strtotime($fechaEmision))?></p>
+            <div class="col-xs-10">
+               <p>Quinientos y 00/100 soles</p>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs-2">
+               <p>Por concepto de:</p>
+            </div>
+
+            <div class="col-xs-10">
+               <p>Servicio de Asesoría Contable y otros requerimientos del mes de enero 2022</p>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs-2">
+               <p>Observación:</p>
+            </div>
+
+            <div class="col-xs-10">
+               <p>Servicio de Asesoría Contable y otros requerimientos del mes de enero 2022</p>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs-2">
+               <p>Inciso:</p>
+            </div>
+
+            <div class="col-xs-10">
+               <p>"A" DEL ARTÍCULO 33 DE LA LEY DEL IMPUESTO A LA RENTA</p>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-xs-2">
+               <p>Fecha de emisión:</p>
+            </div>
+
+            <div class="col-xs-10">
+               <p>12 de Enero del 2022</p>
             </div>
          </div>
       </div><br>
@@ -145,7 +145,7 @@
             <p>:</p>
          </div>
          <div class="col-xs-1">
-            <p><?=$montoTotal?></p>
+            <p>500.00</p>
          </div>
       </div>
 
@@ -158,7 +158,7 @@
             <p>:</p>
          </div>
          <div class="col-xs-1">
-            <p><?=$retencion?></p>
+            <p>0.00</p>
          </div>
       </div>
 
@@ -171,7 +171,7 @@
             <p>:</p>
          </div>
          <div class="col-xs-2">
-            <p><?php echo $totalNeto . " " . $tipoMoneda;?> </p>
+            <p>500.00 SOLES</p>
          </div>
       </div>
 

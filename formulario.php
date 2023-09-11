@@ -37,12 +37,12 @@
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-documento">Tipo de Documento</label><br>
                         <select class="form-select" name="tipo-documento" id="tipo-documento">
-                            <option value="sdoc">Sin Documento</option>
-                            <option value="ruc" selected>RUC</option>
-                            <option value="dni">DNI</option>
-                            <option value="cde">Destacado</option>
-                            <option value="pasa">Pasaporte</option>
-                            <option value="cdi">Cédula Diplomática de Identidad</option>
+                            <option value="Sin Documento">Sin Documento</option>
+                            <option value="RUC" selected>RUC</option>
+                            <option value="DNI">DNI</option>
+                            <option value="DESTACADO">Destacado</option>
+                            <option value="PASAPORTE">Pasaporte</option>
+                            <option value="CED. DIPLOMÁTICA DE IDENTIDAD">Cédula Diplomática de Identidad</option>
                         </select>
                     </div>
                     <div class="col-xl-2 col-md-3">
@@ -51,21 +51,21 @@
                     </div>
                     <div class="col-xl-4 col-md-6">
                         <label for="razon-social">Razón Social</label><br>
-                        <input type="text" class="input-recibo" id="razon-social" name="razon-social">
+                        <input type="text" class="input-recibo" id="razon-social" name="razon-social" required>
                     </div>
 
                     <div class="col-xl-3 col-md-4">
                         <label for="forma-pago">Elija la Forma de Pago</label><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="forma-pago" id="contado" checked>
+                            <input class="form-check-input" type="radio" name="forma-pago" id="contado" checked value="AL CONTADO">
                             <label class="form-check-label" for="contado">
                                 Al contado
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="forma-pago" id="credito">
+                            <input class="form-check-input" type="radio" name="forma-pago" id="credito" value="AL CRÉDITO">
                             <label class="form-check-label" for="credito">
-                                Al credito
+                                Al crédito
                             </label>
                         </div>
                     </div>
@@ -79,13 +79,13 @@
                     <div class="col-xl-2 col-md-3">
                         <label for="es-gratuito">¿El servicio se prestó a título gratuito?</label><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault1" checked>
+                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault1" checked value="si">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault2">
+                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault2" value="no">
                             <label class="form-check-label" for="flexRadioDefault2">
                                 No
                             </label>
@@ -94,7 +94,7 @@
 
                     <div class="col-xl-3 col-md-5">
                         <label for="descripcion">Descripción del servicio</label><br>
-                        <input type="text" class="input-recibo" id="descripcion" name="descripcion">
+                        <input type="text" class="input-recibo" id="descripcion" name="descripcion" required>
                     </div>
 
                     <div class="col-xl-3 col-md-4">
@@ -104,9 +104,8 @@
 
                     <div class="col-xl-2 col-md-3">
                         <label for="fecha-emision">Fecha de Emisión</label><br>
-                        <input type="date" class="input-recibo" id="fecha-emision" name="fecha-emision" value="now()">
+                        <input type="date" class="input-recibo" id="fecha-emision" name="fecha-emision" value='<?php echo $fechaActual; ?>'>
                     </div>
-
 
                 </div><br>
 
@@ -115,13 +114,13 @@
                     <div class="col-xl-3 col-md-4">
                         <label for="tipo-renta">Tipo de Renta de Cuarta Categoría</label><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipo-renta" id="inciso-a" checked>
+                            <input class="form-check-input" type="radio" name="tipo-renta" id="inciso-a" checked value="A">
                             <label class="form-check-label" for="inciso-a">
                                 Inciso A
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="tipo-renta" id="inciso-b">
+                            <input class="form-check-input" type="radio" name="tipo-renta" id="inciso-b" value="B">
                             <label class="form-check-label" for="inciso-b">
                                 Inciso B
                             </label>
@@ -131,13 +130,13 @@
                     <div class="col-xl-3 col-md-4">
                         <label for="hay-retencion">Retención del Impuesto a la renta</label><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="hay-retencion" id="si1" checked>
+                            <input class="form-check-input" type="radio" name="hay-retencion" id="si1" checked value="si">
                             <label class="form-check-label" for="si1">
                                 Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="hay-retencion" id="no1">
+                            <input class="form-check-input" type="radio" name="hay-retencion" id="no1" value="no">
                             <label class="form-check-label" for="no1">
                                 No
                             </label>
@@ -147,13 +146,13 @@
                     <div class="col-xl-3 col-md-4">
                         <label for="hay-pago">¿Se efectuó el pago total?</label><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="hay-pago" id="si2" checked>
+                            <input class="form-check-input" type="radio" name="hay-pago" id="si2" checked value="si">
                             <label class="form-check-label" for="si2">
                                 Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="hay-pago" id="no2">
+                            <input class="form-check-input" type="radio" name="hay-pago" id="no2" value="no">
                             <label class="form-check-label" for="no2">
                                 No
                             </label>
@@ -167,15 +166,15 @@
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-moneda">Tipo de Moneda</label><br>
                         <select class="form-select" name="tipo-moneda" id="tipo-moneda">
-                            <option value="sol" selected>SOL</option>
-                            <option value="dolar">DOLAR</option>
+                            <option value="SOLES" selected>SOL</option>
+                            <option value="DOLARES">DOLAR</option>
                             
                         </select>
                     </div>
 
                     <div class="col-xl-2 col-md-3">
                         <label for="monto-total">Monto total</label><br>
-                        <input type="text" class="input-recibo" id="monto-total" name="monto-total">
+                        <input type="number" class="input-recibo" id="monto-total" name="monto-total" step="0.01">
                     </div>
 
                     <div class="col-xl-2 col-md-3">

@@ -1,6 +1,8 @@
 <?php
 require_once "lib/dompdf/autoload.inc.php";
 use Dompdf\Dompdf;
+date_default_timezone_set('America/Lima');
+setlocale(LC_ALL, 'es_ES');
 
 $ruc = 10123456789;
 $razonSocial = "Mi pequeña empresa";
@@ -10,12 +12,26 @@ $tipoDoc = $_POST["tipo-documento"];
 $numDoc = $_POST["numero-documento"];
 $razonSocial = $_POST["razon-social"];
 $formaPago = $_POST["forma-pago"];
+$esGratuito = $_POST["es-gratuito"];
+$descripcion = $_POST["descripcion"];
+$observacion = $_POST["observacion"];
+$fechaEmision = $_POST["fecha-emision"];
+$tipoRenta = $_POST["tipo-renta"];
+$hayRetencion = $_POST["hay-retencion"];
+$hayPago = $_POST["hay-pago"];
+$tipoMoneda = $_POST["tipo-moneda"];
+$montoTotal = $_POST["monto-total"];
+$retencion = $montoTotal * (8.0/100.0);
+$totalNeto = $montoTotal - $retencion;
 
+$fmt = new NumberFormatter("es_PE", NumberFormatter::SPELLOUT);
+$parte_entera = intval($montoTotal);
+$parte_decimal = intval(($montoTotal - $parte_entera) * 100);
 
+$texto_parte_entera = $fmt->format($parte_entera);
+$texto_parte_entera = strtoupper($texto_parte_entera);
 
-
-
-//var_dump($asignaturas);
+$textoMontoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . $tipoMoneda;
 
 ob_start();
 
