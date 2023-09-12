@@ -11,6 +11,7 @@ $numRecibo=1;
 $tipoDoc = $_POST["tipo-documento"];
 $numDoc = $_POST["numero-documento"];
 $razonSocial = $_POST["razon-social"];
+$domicilio = $_POST["domicilio"];
 $formaPago = $_POST["forma-pago"];
 $esGratuito = $_POST["es-gratuito"];
 $descripcion = $_POST["descripcion"];

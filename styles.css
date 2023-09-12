@@ -1,0 +1,16 @@
+.datos{
+    border: 2px solid blue !important;
+    padding: 0.5rem;
+ }
+
+ .input-recibo{
+    width: 95%;
+ }
+
+ div{
+    padding: 0.25rem;
+ }
+
+ body{
+    background-color: aliceblue;   
+ }

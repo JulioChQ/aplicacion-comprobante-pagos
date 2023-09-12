@@ -6,10 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Emisión de Recibo por Honorarios | Sistema</title>
-    <link rel="stylesheet" href="style.css">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 
 
@@ -17,7 +18,7 @@
 <body>
     <section>
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <div class="col">
                     <br>
                     <h3 id="titulo">Emisión de Recibo por Honorarios</h3>
@@ -32,7 +33,7 @@
 
 
             <form action="emitir-recibo.php" method="POST" target="_blank">
-                <div class="row">
+                <div class="row datos">
                     <h5>Datos del usuario al que se brindó el servicio y la Forma de Pago</h5>
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-documento">Tipo de Documento</label><br>
@@ -45,16 +46,21 @@
                             <option value="CED. DIPLOMÁTICA DE IDENTIDAD">Cédula Diplomática de Identidad</option>
                         </select>
                     </div>
-                    <div class="col-xl-2 col-md-3">
+                    <div class="col-xl-3 col-md-3">
                         <label for="numero-documento">Número de Documento</label><br>
                         <input type="text" class="input-recibo" id="numero-documento" name="numero-documento">
                     </div>
-                    <div class="col-xl-4 col-md-6">
+                    <div class="col-xl-7 col-md-6">
                         <label for="razon-social">Razón Social</label><br>
-                        <input type="text" class="input-recibo" id="razon-social" name="razon-social" required>
+                        <input type="text" class="input-recibo" id="razon-social" name="razon-social">
                     </div>
 
-                    <div class="col-xl-3 col-md-4">
+                    <div class="col-xl-8 col-md-8">
+                        <label for="domicilio">Domicilio</label><br>
+                        <input type="text" class="input-recibo" id="domicilio" name="domicilio">
+                    </div>
+
+                    <div class="col-xl-4 col-md-4">
                         <label for="forma-pago">Elija la Forma de Pago</label><br>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="forma-pago" id="contado" checked value="AL CONTADO">
@@ -74,7 +80,7 @@
 
                 
 
-                <div class="row">
+                <div class="row datos">
                     <h5>Datos del Servicio prestado</h5>
                     <div class="col-xl-2 col-md-3">
                         <label for="es-gratuito">¿El servicio se prestó a título gratuito?</label><br>
@@ -109,7 +115,7 @@
 
                 </div><br>
 
-                <div class="row">
+                <div class="row datos">
                     <h5>Información Adicional</h5>
                     <div class="col-xl-3 col-md-4">
                         <label for="tipo-renta">Tipo de Renta de Cuarta Categoría</label><br>
@@ -160,7 +166,7 @@
                     </div>
                 </div><br>
 
-                <div class="row">
+                <div class="row datos">
                     <h5>Monto de los Honorarios</h5>
 
                     <div class="col-xl-2 col-md-3">
@@ -204,6 +210,11 @@
 
         </div>
     </section>
+
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-center">
+      <p class="text-muted">Desarrollado por el Grupo 10 del curso de Contabilidad, Costos y Presupuestos</p>
+
+   </footer>
 
     <script src="formulario.js"></script>
 

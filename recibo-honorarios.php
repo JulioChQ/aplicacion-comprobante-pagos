@@ -24,9 +24,9 @@
    <div class="container">
       <div class="row">
          <div class="col-xs-6">
-            <h4>Juan Pedro Lopez Mamani</h4>
-            <p>Calle 2 de mayo 1001</p>
-            <p>Telefono: 123456789</p>
+            <h4>LOPEZ MAMANI RICARDO MIGUEL</h4>
+            <p>CALLE 2 DE MAYO 1001 TACNA - TACNA - TACNA</p>
+            <p>TELEFONO: 123456789</p>
          </div>
          <div class="col-xs-5 text-center numero">
             <h4>R.U.C. 10123456789</h4>
@@ -71,7 +71,7 @@
             </div>
 
             <div class="col-xs-9">
-               <p>CAL. ASTURIAS NRO. 105 LIMA - LIMA - PUEBLO LIBRE</p>
+               <p><?=$domicilio?></p>
             </div>
          </div>
 
