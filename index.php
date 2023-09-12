@@ -8,8 +8,8 @@ $idioma = 'es_PE'; // Idioma: español de España
 $fmt = new NumberFormatter("es_PE", NumberFormatter::SPELLOUT);
 $texto = $fmt->format($numero);
 
-echo "Número: $numero<br>";
-echo "Texto: $texto";
+//echo "Número: $numero<br>";
+//echo "Texto: $texto";
 
 $fechaActual = date("Y-m-d");
 require_once "formulario.php";

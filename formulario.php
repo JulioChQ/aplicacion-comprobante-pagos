@@ -36,7 +36,7 @@
                     <h5>Datos del usuario al que se brindó el servicio y la Forma de Pago</h5>
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-documento">Tipo de Documento</label><br>
-                        <select class="form-select" name="tipo-documento" id="tipo-documento">
+                        <select class="form-select" name="tipo-documento" id="tipo-documento" >
                             <option value="Sin Documento">Sin Documento</option>
                             <option value="RUC" selected>RUC</option>
                             <option value="DNI">DNI</option>
@@ -131,12 +131,12 @@
                         <label for="hay-retencion">Retención del Impuesto a la renta</label><br>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="hay-retencion" id="si1" checked value="si">
-                            <label class="form-check-label" for="si1">
+                            <label class="form-check-label" for="si1" oninput="actualizarMontos()">
                                 Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="hay-retencion" id="no1" value="no">
+                            <input class="form-check-input" type="radio" name="hay-retencion" id="no1" value="no" oninput="actualizarMontos()">
                             <label class="form-check-label" for="no1">
                                 No
                             </label>
@@ -174,7 +174,7 @@
 
                     <div class="col-xl-2 col-md-3">
                         <label for="monto-total">Monto total</label><br>
-                        <input type="number" class="input-recibo" id="monto-total" name="monto-total" step="0.01">
+                        <input type="number" class="input-recibo" id="monto-total" name="monto-total" step="0.01" oninput="actualizarMontos()" >
                     </div>
 
                     <div class="col-xl-2 col-md-3">
@@ -204,6 +204,8 @@
 
         </div>
     </section>
+
+    <script src="formulario.js"></script>
 
 </body>
 
