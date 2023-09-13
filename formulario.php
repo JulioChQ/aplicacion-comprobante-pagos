@@ -82,7 +82,7 @@
 
                 <div class="row datos">
                     <h5>Datos del Servicio prestado</h5>
-                    <div class="col-xl-2 col-md-3">
+                    <div class="col-xl-2 col-md-4">
                         <label for="es-gratuito">¿El servicio se prestó a título gratuito?</label><br>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault1" checked value="si">
@@ -98,17 +98,17 @@
                         </div>
                     </div>
 
-                    <div class="col-xl-3 col-md-5">
+                    <div class="col-xl-3 col-md-8">
                         <label for="descripcion">Descripción del servicio</label><br>
                         <input type="text" class="input-recibo" id="descripcion" name="descripcion" required>
                     </div>
 
-                    <div class="col-xl-3 col-md-4">
+                    <div class="col-xl-3 col-md-8">
                         <label for="observacion">Observación(Opcional)</label><br>
                         <input type="text" class="input-recibo" id="observacion" name="observacion">
                     </div>
 
-                    <div class="col-xl-2 col-md-3">
+                    <div class="col-xl-2 col-md-4">
                         <label for="fecha-emision">Fecha de Emisión</label><br>
                         <input type="date" class="input-recibo" id="fecha-emision" name="fecha-emision" value='<?php echo $fechaActual; ?>'>
                     </div>
