@@ -69,7 +69,7 @@
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="forma-pago" id="credito" value="AL CRÉDITO">
+                            <input class="form-check-input" type="radio" name="forma-pago" id="credito" value="AL CRÉDITO" disabled>
                             <label class="form-check-label" for="credito">
                                 Al crédito
                             </label>
