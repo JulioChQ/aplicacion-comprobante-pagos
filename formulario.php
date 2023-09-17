@@ -85,13 +85,13 @@
                     <div class="col-xl-2 col-md-4">
                         <label for="es-gratuito">¿El servicio se prestó a título gratuito?</label><br>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault1" checked value="si">
+                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault1" value="si">
                             <label class="form-check-label" for="flexRadioDefault1">
                                 Si
                             </label>
                         </div>
                         <div class="form-check">
-                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault2" value="no">
+                            <input class="form-check-input" type="radio" name="es-gratuito" id="flexRadioDefault2" value="no" checked>
                             <label class="form-check-label" for="flexRadioDefault2">
                                 No
                             </label>
@@ -110,7 +110,7 @@
 
                     <div class="col-xl-2 col-md-4">
                         <label for="fecha-emision">Fecha de Emisión</label><br>
-                        <input type="date" class="input-recibo" id="fecha-emision" name="fecha-emision" value='<?php echo $fechaActual; ?>'>
+                        <input type="date" class="input-recibo" id="fecha-emision" name="fecha-emision" value='<?php echo $fechaActual; ?>' min="<?=$fechaAnterior?>" max="<?=$fechaActual?>">
                     </div>
 
                 </div><br>
@@ -121,13 +121,13 @@
                         <label for="tipo-renta">Tipo de Renta de Cuarta Categoría</label><br>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="tipo-renta" id="inciso-a" checked value="A">
-                            <label class="form-check-label" for="inciso-a">
+                            <label class="form-check-label" for="inciso-a" title="Inciso A: El desempeño de funciones de director de empresas, sindico, mandatario, gestor de negocios, albacea y actividades similares, incluyendo el desempeño de funciones del consejero regional, por las cuales perciban dietas.">
                                 Inciso A
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="tipo-renta" id="inciso-b" value="B">
-                            <label class="form-check-label" for="inciso-b">
+                            <label class="form-check-label" for="inciso-b" title="Inciso B: El ejercicio individual, de cualquier profesión, arte, ciencia, oficio o actividades no incluídas expresamente en la tercera categoría.">
                                 Inciso B
                             </label>
                         </div>

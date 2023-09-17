@@ -121,7 +121,7 @@
             </div>
 
             <div class="col-xs-9">
-               <p><?=$tipoRenta?></p>
+               <p><?='"' . $tipoRenta . '"' . " DEL ARTÍCULO 33 DE LA LEY DEL IMPUESTO A LA RENTA"?></p>
             </div>
          </div>
 

@@ -22,7 +22,11 @@ $hayRetencion = $_POST["hay-retencion"];
 $hayPago = $_POST["hay-pago"];
 $tipoMoneda = $_POST["tipo-moneda"];
 $montoTotal = $_POST["monto-total"];
-$retencion = $montoTotal * (8.0/100.0);
+$retencion = 0;
+if($hayRetencion == "si"){
+    $retencion = $montoTotal * (8.0/100.0);
+}
+
 $totalNeto = $montoTotal - $retencion;
 
 $fmt = new NumberFormatter("es_PE", NumberFormatter::SPELLOUT);
@@ -39,6 +43,7 @@ ob_start();
 require_once "recibo-honorarios.php";
 
 $html = ob_get_clean();
+
 //echo $html;
 
 
