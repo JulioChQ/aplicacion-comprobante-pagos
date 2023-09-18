@@ -8,7 +8,8 @@ $ruc = 10123456789;
 $razonSocial = "Mi pequeña empresa";
 $numRecibo=1;
 
-$tipoDoc = $_POST["tipo-documento"];
+//$tipoDoc = $_POST["tipo-documento"];
+$tipoDoc = "RUC";
 $numDoc = $_POST["numero-documento"];
 $razonSocial = $_POST["razon-social"];
 $domicilio = $_POST["domicilio"];
