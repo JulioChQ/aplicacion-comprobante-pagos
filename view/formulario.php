@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="view/styles.css">
     <script src="lib/jquery.min.js"></script>
 </head>
 
@@ -33,12 +33,12 @@
 
 
 
-            <form action="emitir-recibo.php" method="POST" target="_blank" id="formulario">
+            <form action="controller/emitir-recibo.php" method="POST" target="_blank" id="formulario">
                 <div class="row datos">
                     <h5><b>Datos del Usuario al que se brindó el Servicio y la Forma de Pago</b></h5>
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-documento"><b>Tipo de Documento</b></label><br>
-                        <select class="form-select" name="tipo-documento" id="tipo-documento" disabled>
+                        <select class="form-select" name="tipo-documento" id="tipo-documento">
                             <option value="Sin Documento">Sin Documento</option>
                             <option value="RUC" selected>RUC</option>
                             <option value="DNI">DNI</option>
@@ -225,49 +225,12 @@
     </section>
 
     <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top text-center">
-      <p class="text-muted">Desarrollado por el Grupo 10 del curso de Contabilidad, Costos y Presupuestos</p>
+      <p class="text-muted text-center">Desarrollado por el Grupo 10 del curso de Contabilidad, Costos y Presupuestos</p>
 
    </footer>
 
-    <script src="formulario.js"></script>
-    <script>
-
-$("#validar").click(function(){
-
-  var ruc=$("#numero-documento").val();
-
-
-$.ajax({           
-    type:"POST",
-    url: "consultar-documento.php",
-    data: 'ruc='+ruc,
-    dataType: 'json',
-    success: function(data) {
-  
+    <script src="view/js/formulario.js"></script>
     
-        if(data==1)
-        {
-            alert('El RUC tiene que tener 11 digitos');
-        }
-        else{
-            console.log(data);
-            document.getElementById("razon-social").value = data.nombre;
-            document.getElementById("domicilio").value = data.direccion;
-            $("#numero-documento").html(data.numeroDocumento);
-            $("#razon-social").html(data.nombre);
-            //$("#estado").html(data.estado);
-
-            $("#domicilio").html(data.direccion);
-            //$("#departamento").html(data.departamento);
-        }
- 
-
-    }
-});
-
-})
-
-</script>
 
 </body>
 

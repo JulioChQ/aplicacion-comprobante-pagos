@@ -1,5 +1,5 @@
 <?php
-require_once "lib/dompdf/autoload.inc.php";
+require_once "../lib/dompdf/autoload.inc.php";
 use Dompdf\Dompdf;
 date_default_timezone_set('America/Lima');
 setlocale(LC_ALL, 'es_ES');
@@ -9,7 +9,7 @@ $razonSocial = "Mi pequeña empresa";
 $numRecibo=1;
 
 //$tipoDoc = $_POST["tipo-documento"];
-$tipoDoc = "RUC";
+$tipoDoc = $_POST["tipo-documento"];
 $numDoc = $_POST["numero-documento"];
 $razonSocial = $_POST["razon-social"];
 $domicilio = $_POST["domicilio"];
@@ -41,7 +41,7 @@ $textoMontoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " .
 
 ob_start();
 
-require_once "recibo-honorarios.php";
+require_once "../view/reports/recibo-honorarios.php";
 
 $html = ob_get_clean();
 

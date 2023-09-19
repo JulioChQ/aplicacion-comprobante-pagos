@@ -13,4 +13,4 @@ $texto = $fmt->format($numero);
 
 $fechaActual = date("Y-m-d");
 $fechaAnterior = date('Y-m-d', strtotime($fechaActual . ' -2 days'));
-require_once "formulario.php";
+require_once "view/formulario.php";

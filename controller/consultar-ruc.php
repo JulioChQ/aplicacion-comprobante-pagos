@@ -1,25 +1,5 @@
 <?php
 
-$ruc=$_POST["ruc"];
-
-
-if(strlen($ruc)<11 || strlen($ruc)>11)
-{
-    $consulta=1;
-}
-else{
-    
-    $consulta=file_get_contents('https://api.apis.net.pe/v1/ruc?numero='.$ruc.'');
-}
-
-
-
-
-
-
-
-
-echo $consulta;
 
 $token = 'apis-token-5491.2ydG0fkdpjPjT8Lx2yip3hHzpmTIH0Zk';
 $ruc = $_POST["ruc"];
@@ -51,9 +31,7 @@ $response = curl_exec($curl);
 curl_close($curl);
 // Datos de empresas según padron reducido
 
-
-// Datos listos para usar
-//$persona = json_decode($response);
+echo $response;
 
 
 ?>
