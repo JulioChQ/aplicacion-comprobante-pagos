@@ -38,7 +38,7 @@
                     <h5><b>Datos del Usuario al que se brindó el Servicio y la Forma de Pago</b></h5>
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-documento"><b>Tipo de Documento</b></label><br>
-                        <select class="form-select" name="tipo-documento" id="tipo-documento">
+                        <select class="form-select" name="tipo-documento" id="tipo-documento" onchange="cambiarDocumento()">
                             <option value="Sin Documento">Sin Documento</option>
                             <option value="RUC" selected>RUC</option>
                             <option value="DNI">DNI</option>
@@ -48,17 +48,17 @@
                     </div>
                     <div class="col-xl-3 col-md-3">
                         <label for="numero-documento"><b>Número de Documento</b></label><br>
-                        <input type="text" class="input-recibo" id="numero-documento" name="numero-documento" placeholder="Ejemplo: 12345678901" required>
+                        <input type="text" class="input-recibo" id="numero-documento" name="numero-documento" placeholder="Ejemplo: 12345678901">
                         <a class="btn btn-info" id="validar">Validar</a>
                     </div>
                     <div class="col-xl-7 col-md-6">
                         <label for="razon-social"><b>Nombre o Razón Social</b></label><br>
-                        <input type="text" class="input-recibo" id="razon-social" name="razon-social" placeholder="Ingrese razón social de la empresa o nombre de la persona" readonly>
+                        <input type="text" class="input-recibo" id="razon-social" name="razon-social" placeholder="Ingrese razón social de la empresa o nombre de la persona" required>
                     </div>
 
                     <div class="col-xl-8 col-md-8">
                         <label for="domicilio"><b>Domicilio</b></label><br>
-                        <input type="text" class="input-recibo" id="domicilio" name="domicilio" placeholder="Ingrese el domicilio de la persona o empresa (calle, número, ciudad)" readonly>
+                        <input type="text" class="input-recibo" id="domicilio" name="domicilio" placeholder="Ingrese el domicilio de la persona o empresa (calle, número, ciudad)">
                     </div>
 
                     <div class="col-xl-4 col-md-4">
@@ -76,7 +76,6 @@
                             </label>
                         </div>
                     </div>
-
                 </div><br>
 
                 

@@ -51,6 +51,8 @@ $("#validar").click(function () {
             });
             break;
         default:
+            break;
+
             
     }
 
@@ -96,3 +98,9 @@ formulario.addEventListener("submit", function (event) {
         event.preventDefault(); // Detener el envío del formulario
     }
 });
+
+function cambiarDocumento(){
+    document.getElementById("numero-documento").value = "";
+    document.getElementById("razon-social").value = "";
+    document.getElementById("domicilio").value = "";
+}
