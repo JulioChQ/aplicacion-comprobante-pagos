@@ -33,7 +33,7 @@
 
 
 
-            <form action="controller/emitir-recibo.php" method="POST" target="_blank" id="formulario">
+            <form action="controller/emitir-recibo-honorarios.php" method="POST" target="_blank" id="formulario">
                 <div class="row datos">
                     <h5><b>Datos del Usuario al que se brindó el Servicio y la Forma de Pago</b></h5>
                     <div class="col-xl-2 col-md-3">
@@ -228,7 +228,7 @@
 
    </footer>
 
-    <script src="view/js/formulario.js"></script>
+    <script src="view/js/formulario-recibo-honorarios.js"></script>
     
 
 </body>
