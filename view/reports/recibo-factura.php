@@ -2,22 +2,26 @@
 <html lang="es">
 
 <head>
-   
+
    <title>Factura de Venta | Sistema</title>
 
    <link rel='stylesheet' type="text/css" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
-   
+
 
 </head>
 <style>
-   .contenido{
+   * {
+      font-size: 92% !important; 
+   }
+   .contenido {
       border: 1px solid #000 !important;
    }
 
-   .numero{
+   .numero {
       border: 1px solid #000 !important;
    }
-   </style>
+</style>
+
 <body>
 
 
@@ -29,6 +33,8 @@
             <p>CALLE 2 DE MAYO 1001 TACNA - TACNA - TACNA</p>
             <p>TELEFONO: 123456789</p>
          </div>
+      </div><br>
+      <div class="row">
          <div class="col-xs-12 text-center numero">
             <h4><b>FACTURA ELECTRÓNICA</b></h4>
             <h4>F001 - 000014</h4>
@@ -36,145 +42,56 @@
             <H5>Señor (es): IMPORTACIONES HOGAR FELIZ</H5>
             <h5>RUC N°: 20611012345</h5>
             <h5>Direc.: CALLE 3 DE DICIEMBRE 111 TACNA - TACNA - TACNA</h5>
+            <h5>MEDIO DE PAGO: EFECTIVO</h5>
+            <h5>FORMA DE PAGO: AL CONTADO</h5>
          </div>
       </div><br>
-      <div class="row contenido">
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Recibí de:</b></p>
-            </div>
+      <div class="row contenido text-center">
+         <div class="col-xs-12 text-center">
+            <table class="table text-center">
+               <thead>
+                  <tr>
+                     <th>Cant.</th>
+                     <th>Descripción</th>
+                     <th>P. U.</th>
+                     <th>Importe</th>
+                  </tr>
+               </thead>
+               <tbody>
+                  <tr>
+                     <td>2</td>
+                     <td>A01-AGENDA</td>
+                     <td>S/. 20.00</td>
+                     <td>S/. 40.00</td>
+                  </tr>
+                  <tr>
+                     <td>2</td>
+                     <td>A02-AGENDA</td>
+                     <td>S/. 20.00</td>
+                     <td>S/. 40.00</td>
+                  </tr>
+               </tbody>
+
+            </table>
          </div>
 
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Identificado con:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$tipoDoc?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Número:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$numDoc?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Domicilio Fiscal del usuario:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$domicilio?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Forma de Pago:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$formaPago?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>La suma de:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$textoMontoTotal?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Por concepto de:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$descripcion?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Observación:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=$observacion?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Inciso:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?='"' . $tipoRenta . '"' . " DEL ARTÍCULO 33 DE LA LEY DEL IMPUESTO A LA RENTA"?></p>
-            </div>
-         </div>
-
-         <div class="row">
-            <div class="col-xs-3">
-               <p><b>Fecha de emisión:</b></p>
-            </div>
-
-            <div class="col-xs-9">
-               <p><?=date("d",strtotime($fechaEmision))?> de <?=strftime("%B",strtotime($fechaEmision))?> del <?=date("Y",strtotime($fechaEmision))?></p>
-            </div>
+         <div class="col-xs-12 text-right">
+            <h5>GRAVADA: S/. 70.00</h5>
+            <h5>IGV (18.00%): S/. 10.00</h5>
+            <h5>DESCUENTO: S/. 0.00</h5>
+            <h5>TOTAL: S/. 80</h5>
          </div>
       </div><br>
 
-      <div class="row">
-         <div class="col-xs-4"></div>
-         <div class="col-xs-3">
-            <p><b>Total por honorarios</b></p>
-         </div>
-         <div class="col-xs-1">
-            <p>:</p>
-         </div>
-         <div class="col-xs-1">
-            <p><?=$montoTotal?></p>
+      <div class="row contenido text-center">
+         <div class="col-xs-12">
+            <p>IMPORTE EN LETRAS: SON OCHENTA CON 00/100</p>
+            <p>Representación impresa de la Factura Electrónica.</p>
+            <p>VENDEDOR: CAJERO PRINCIPAL</p>
          </div>
       </div>
 
-      <div class="row">
-         <div class="col-xs-4"></div>
-         <div class="col-xs-3">
-            <p><b>Retención (8%) IR</b></p>
-         </div>
-         <div class="col-xs-1">
-            <p>:</p>
-         </div>
-         <div class="col-xs-1">
-            <p><?=$retencion?></p>
-         </div>
-      </div>
-
-      <div class="row">
-         <div class="col-xs-4"></div>
-         <div class="col-xs-3">
-            <p><b>Total Neto Recibido</b></p>
-         </div>
-         <div class="col-xs-1">
-            <p>:</p>
-         </div>
-         <div class="col-xs-2">
-            <p><?php echo $totalNeto . " " . $tipoMoneda;?> </p>
-         </div>
-      </div>
-
+     
 
    </div>
 
@@ -182,7 +99,6 @@
 
    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
       <p class="text-muted">Hora y fecha de impresión: <?= date("H:i:s d/m/Y") ?></p>
-
    </footer>
 </body>
 
