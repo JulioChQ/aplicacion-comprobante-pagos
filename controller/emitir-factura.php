@@ -56,6 +56,6 @@ $options->set(array("isRemoteEnabled" => true));
 $options->setDpi(72);
 $dompdf->setOptions($options);
 $dompdf->loadHtml($html);
-$dompdf->setPaper(array(0,0,204,850));
+$dompdf->setPaper(array(0,0,306,850));
 $dompdf->render();
 $dompdf->stream("recibo_honorarios.pdf", array("Attachment" => false));

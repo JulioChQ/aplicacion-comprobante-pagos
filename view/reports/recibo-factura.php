@@ -12,6 +12,8 @@
 <style>
    * {
       font-size: 92% !important; 
+      margin: 1%;
+      
    }
    .contenido {
       border: 1px solid #000 !important;
@@ -34,8 +36,8 @@
             <p>TELEFONO: 123456789</p>
          </div>
       </div><br>
-      <div class="row">
-         <div class="col-xs-12 text-center numero">
+      <div class="row contenido">
+         <div class="col-xs-12">
             <h4><b>FACTURA ELECTRÓNICA</b></h4>
             <h4>F001 - 000014</h4>
             <h5>Fecha de emisión: 03-12-2023 / 00:00 AM</h5>
@@ -75,13 +77,17 @@
             </table>
          </div>
 
-         <div class="col-xs-12 text-right">
+         
+      </div><br>
+
+      <div class="row">
+      <div class="col-xs-12 text-right">
             <h5>GRAVADA: S/. 70.00</h5>
             <h5>IGV (18.00%): S/. 10.00</h5>
             <h5>DESCUENTO: S/. 0.00</h5>
             <h5>TOTAL: S/. 80</h5>
          </div>
-      </div><br>
+      </div>
 
       <div class="row contenido text-center">
          <div class="col-xs-12">
