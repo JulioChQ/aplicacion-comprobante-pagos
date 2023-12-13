@@ -9,19 +9,15 @@ $razonSocial = "Mi pequeña empresa";
 $numRecibo=1;
 
 //$tipoDoc = $_POST["tipo-documento"];
-$tipoDoc = $_POST["tipo-documento"];
+$tipoDoc = "DNI";
 $numDoc = $_POST["numero-documento"];
 $razonSocial = $_POST["razon-social"];
 $domicilio = $_POST["domicilio"];
 $formaPago = $_POST["forma-pago"];
-$esGratuito = $_POST["es-gratuito"];
-$descripcion = $_POST["descripcion"];
 $observacion = $_POST["observacion"];
 $fechaEmision = $_POST["fecha-emision"];
-$tipoRenta = $_POST["tipo-renta"];
-$hayRetencion = $_POST["hay-retencion"];
-$hayPago = $_POST["hay-pago"];
-$tipoMoneda = $_POST["tipo-moneda"];
+$tipoMoneda = "SOL";
+$
 $montoTotal = $_POST["monto-total"];
 $retencion = 0;
 if($hayRetencion == "si"){

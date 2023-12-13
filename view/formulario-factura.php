@@ -36,7 +36,7 @@
                     <h5><b>Datos del Cliente</b></h5>
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-documento"><b>Tipo de Documento</b></label><br>
-                        <select class="form-select" name="tipo-documento" id="tipo-documento" onchange="cambiarDocumento()">
+                        <select class="form-select" name="tipo-documento" id="tipo-documento" onchange="cambiarDocumento()" disabled>
                             <option value="Sin Documento">Sin Documento</option>
                             <option value="RUC" selected>RUC</option>
                             <option value="DNI">DNI</option>
@@ -119,62 +119,56 @@
 
                 <div class="row datos">
                     <h5><b>Lista de Productos/Servicios</b></h5>
-                    
+
                     <div class="col-xl-1 col-md-2">
                         <label for="id-producto"><b>ID</b></label><br>
-                        <input type="text" class="input-recibo" id="id-producto" name="id-producto" >
+                        <input type="text" class="input-recibo" id="id-producto" name="id-producto">
                     </div>
 
                     <div class="col-xl-3 col-md-5">
                         <label for="descripcion-producto"><b>Descripción</b></label><br>
-                        <input type="text" class="input-recibo" id="descripcion-producto" name="descripcion-producto" >
+                        <input type="text" class="input-recibo" id="descripcion-producto" name="descripcion-producto">
                     </div>
 
                     <div class="col-xl-1 col-md-1">
                         <label for="cantidad-producto"><b>Cant.</b></label><br>
-                        <input type="number" class="input-recibo" id="cantidad-producto" name="cantidad-producto" value="1" >
+                        <input type="number" class="input-recibo" id="cantidad-producto" name="cantidad-producto" value="1" oninput="actualizarImporte()">
                     </div>
 
                     <div class="col-xl-1 col-md-2">
                         <label for="precio-producto"><b>P. U.</b></label><br>
-                        <input type="number" class="input-recibo" id="precio-producto" name="precio-producto" value="0.00">
+                        <input type="number" class="input-recibo" id="precio-producto" name="precio-producto" value="0.00" oninput="actualizarImporte()" step="0.01">
                     </div>
 
                     <div class="col-xl-1 col-md-2">
                         <label for="importe-producto"><b>Importe</b></label><br>
-                        <input type="number" class="input-recibo" id="importe-producto" name="importe-producto" disabled value="0.00">
+                        <input type="number" class="input-recibo" id="importe-producto" name="importe-producto" disabled value="0.00" step="0.01">
                     </div>
 
                     <div class="col-12 text-center">
-                        <button class="btn btn-success">Agregar</button>
-                        <button class="btn btn-primary">Editar</button>
-                        <button class="btn btn-danger">Quitar</button>
+                        <a class="btn btn-success" onclick="agregarProducto()">Agregar</a>
                     </div>
 
                     <div class="col text-center">
-                        <table class="table" id="lista-productos">
+                        <table class="table" id="lista-productos" onchange="ac">
                             <thead>
                                 <tr>
                                     <th>Código</th>
                                     <th>Descripción</th>
                                     <th>Tipo IGV</th>
                                     <th>Unidad/Medida</th>
+                                    <th>P. U.</th>
                                     <th>Cantidad</th>
                                     <th>Sub Total</th>
                                     <th>IGV</th>
                                     <th>Importe</th>
+                                    <th>Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>A01</td>
-                                    <td>AGENDA</td>
-                                    <td>EXONERADO</td>
-                                    <td>UNIDADES</td>
 
-                                </tr>
                             </tbody>
-                            
+
                         </table>
                     </div>
 
@@ -187,8 +181,8 @@
 
 
                     <div class="col-xl-2 col-md-3">
-                        <label for="monto-total"><b>Monto total</b></label><br>
-                        <input type="number" class="input-recibo" id="monto-total" name="monto-total" step="0.01" oninput="actualizarMontos()" required placeholder="0.00">
+                        <label for="gravada"><b>Gravada</b></label><br>
+                        <input type="number" class="input-recibo" id="gravada" name="gravada" step="0.01" oninput="actualizarMontos()" required placeholder="0.00" disabled>
                     </div>
 
                     <div class="col-xl-2 col-md-3">
@@ -197,8 +191,8 @@
                     </div>
 
                     <div class="col-xl-2 col-md-3">
-                        <label for="total-neto"><b>Total Neto Recibido</b></label><br>
-                        <input type="text" class="input-recibo" id="total-neto" disabled value="0">
+                        <label for="total"><b>Total</b></label><br>
+                        <input type="text" class="input-recibo" id="total" disabled value="0">
                     </div>
                 </div><br>
 
