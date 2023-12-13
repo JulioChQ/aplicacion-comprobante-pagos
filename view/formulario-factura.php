@@ -14,8 +14,6 @@
     <script src="lib/jquery.min.js"></script>
 </head>
 
-
-
 <body>
     <section>
         <div class="container">
@@ -121,7 +119,31 @@
 
                 <div class="row datos">
                     <h5><b>Lista de Productos/Servicios</b></h5>
+                    
+                    <div class="col-xl-1 col-md-2">
+                        <label for="id-producto"><b>ID</b></label><br>
+                        <input type="text" class="input-recibo" id="id-producto" name="id-producto" >
+                    </div>
 
+                    <div class="col-xl-3 col-md-5">
+                        <label for="descripcion-producto"><b>Descripción</b></label><br>
+                        <input type="text" class="input-recibo" id="descripcion-producto" name="descripcion-producto" >
+                    </div>
+
+                    <div class="col-xl-1 col-md-1">
+                        <label for="cantidad-producto"><b>Cant.</b></label><br>
+                        <input type="number" class="input-recibo" id="cantidad-producto" name="cantidad-producto" value="1" >
+                    </div>
+
+                    <div class="col-xl-1 col-md-2">
+                        <label for="precio-producto"><b>P. U.</b></label><br>
+                        <input type="number" class="input-recibo" id="precio-producto" name="precio-producto" value="0.00">
+                    </div>
+
+                    <div class="col-xl-1 col-md-2">
+                        <label for="importe-producto"><b>Importe</b></label><br>
+                        <input type="number" class="input-recibo" id="importe-producto" name="importe-producto" disabled value="0.00">
+                    </div>
 
                     <div class="col-12 text-center">
                         <button class="btn btn-success">Agregar</button>
@@ -130,7 +152,7 @@
                     </div>
 
                     <div class="col text-center">
-                        <table class="table">
+                        <table class="table" id="lista-productos">
                             <thead>
                                 <tr>
                                     <th>Código</th>
