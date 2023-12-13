@@ -3,10 +3,7 @@ require_once "../lib/dompdf/autoload.inc.php";
 use Dompdf\Dompdf;
 date_default_timezone_set('America/Lima');
 setlocale(LC_ALL, 'es_ES');
-/*
-$ruc = 10123456789;
-$razonSocial = "Mi pequeña empresa";
-$numRecibo=1;
+
 
 //$tipoDoc = $_POST["tipo-documento"];
 $tipoDoc = "DNI";
@@ -17,15 +14,15 @@ $formaPago = $_POST["forma-pago"];
 $observacion = $_POST["observacion"];
 $fechaEmision = $_POST["fecha-emision"];
 $tipoMoneda = "SOL";
-$
-$montoTotal = $_POST["monto-total"];
-$retencion = 0;
-if($hayRetencion == "si"){
-    $retencion = $montoTotal * (8.0/100.0);
-}
+$idProductos[] = $_POST["id-productos"];
+$descripcionProductos = $_POST["descripcion-productos"];
+$precioProductos = $_POST["precio-productos"];
+$cantidadProductos = $_POST["cantidad-productos"];
 
-$totalNeto = $montoTotal - $retencion;
-
+$total = 100;
+$igv = $total * 18/100;
+$gravada = $total- $igv;
+/*
 $fmt = new NumberFormatter("es_PE", NumberFormatter::SPELLOUT);
 $parte_entera = intval($montoTotal);
 $parte_decimal = intval(($montoTotal - $parte_entera) * 100);
@@ -34,10 +31,11 @@ $texto_parte_entera = $fmt->format($parte_entera);
 $texto_parte_entera = strtoupper($texto_parte_entera);
 
 $textoMontoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . $tipoMoneda;
+
 */
 ob_start();
 
-require_once "../view/reports/recibo-factura.php";
+require_once "view/reports/recibo-factura.php";
 
 $html = ob_get_clean();
 

@@ -112,6 +112,7 @@ function agregarProducto() {
     cell5.setAttribute("name", "precio-productos[]");
 
     cell6.innerHTML = cantidad;
+    cell6.setAttribute("name", "cantidad-productos[]")
     cell7.innerHTML = precio * cantidad;
     cell8.innerHTML = (cantidad * precio) * 18 / 100;
     cell9.innerHTML = precio * cantidad;
