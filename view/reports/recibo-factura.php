@@ -41,9 +41,9 @@
             <h4><b>FACTURA ELECTRÓNICA</b></h4>
             <h4>F001 - 000001</h4>
             <h5>Fecha de emisión: </h5>
-            <H5>Señor (es): IMPORTACIONES HOGAR FELIZ</H5>
-            <h5>RUC N°: 20611012345</h5>
-            <h5>Direc.: CALLE 3 DE DICIEMBRE 111 TACNA - TACNA - TACNA</h5>
+            <H5>Señor (es): <?=$razonSocial?></H5>
+            <h5>RUC N°: <?=$numDoc?></h5>
+            <h5>Direc.: <?=$domicilio?></h5>
             <h5>MEDIO DE PAGO: EFECTIVO</h5>
             <h5>FORMA DE PAGO: AL CONTADO</h5>
          </div>

@@ -100,19 +100,36 @@ function agregarProducto() {
     var cell9 = newRow.insertCell(8);
     var cell10 = newRow.insertCell(9);
 
+    var campoOculto1 = document.createElement("input");
+    campoOculto1.type = "hidden";
+    campoOculto1.name = "id-productos[]";
+    campoOculto1.value = id;
     cell1.innerHTML = id;
-    cell1.setAttribute("name", "id-productos[]");
+    cell1.appendChild(campoOculto1);
 
     cell2.innerHTML = descripcion;
-    cell2.setAttribute("name", "descripcion-productos[]")
+    var campoOculto2 = document.createElement("input");
+    campoOculto2.type = "hidden";
+    campoOculto2.name = "descripcion-productos[]";
+    campoOculto2.value = descripcion;
+    cell2.appendChild(campoOculto2)
 
     cell3.innerHTML = "GRAVADO";
     cell4.innerHTML = "UNIDADES";
     cell5.innerHTML = precio;
-    cell5.setAttribute("name", "precio-productos[]");
+    var campoOculto3 = document.createElement("input");
+    campoOculto3.type = "hidden";
+    campoOculto3.name = "precio-productos[]";
+    campoOculto3.value = precio;
+    cell5.appendChild(campoOculto3)
 
     cell6.innerHTML = cantidad;
-    cell6.setAttribute("name", "cantidad-productos[]")
+    var campoOculto4 = document.createElement("input");
+    campoOculto4.type = "hidden";
+    campoOculto4.name = "cantidad-productos[]";
+    campoOculto4.value = cantidad;
+    cell6.appendChild(campoOculto4);
+
     cell7.innerHTML = precio * cantidad;
     cell8.innerHTML = (cantidad * precio) * 18 / 100;
     cell9.innerHTML = precio * cantidad;

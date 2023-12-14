@@ -35,7 +35,7 @@ $textoMontoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " .
 */
 ob_start();
 
-require_once "view/reports/recibo-factura.php";
+require_once "../view/reports/recibo-factura.php";
 
 $html = ob_get_clean();
 
@@ -50,6 +50,6 @@ $options->set(array("isRemoteEnabled" => true));
 $options->setDpi(72);
 $dompdf->setOptions($options);
 $dompdf->loadHtml($html);
-$dompdf->setPaper(array(0,0,306,850));
+$dompdf->setPaper(array(0,0,408,850));
 $dompdf->render();
 $dompdf->stream("recibo_honorarios.pdf", array("Attachment" => false));
