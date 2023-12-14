@@ -108,7 +108,7 @@
                     </div>
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-moneda"><b>Tipo de Moneda</b></label><br>
-                        <select class="form-select" name="tipo-moneda" id="tipo-moneda">
+                        <select class="form-select" name="tipo-moneda" id="tipo-moneda" disabled>
                             <option value="SOLES" selected>SOL</option>
                             <option value="DOLARES">DOLAR</option>
 
@@ -150,7 +150,7 @@
                     </div>
 
                     <div class="col text-center">
-                        <table class="table" id="lista-productos" onchange="ac">
+                        <table class="table" id="lista-productos">
                             <thead>
                                 <tr>
                                     <th>Código</th>

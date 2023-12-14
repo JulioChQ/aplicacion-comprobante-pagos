@@ -14,25 +14,31 @@ $formaPago = $_POST["forma-pago"];
 $observacion = $_POST["observacion"];
 $fechaEmision = $_POST["fecha-emision"];
 $tipoMoneda = "SOL";
-$idProductos[] = $_POST["id-productos"];
+$idProductos = $_POST["id-productos"];
 $descripcionProductos = $_POST["descripcion-productos"];
 $precioProductos = $_POST["precio-productos"];
 $cantidadProductos = $_POST["cantidad-productos"];
+$total = 0;
 
-$total = 100;
+for($i=0; $i < count($idProductos); $i++){
+    $descripcionProductos[$i] = $idProductos[$i] . " - " . $descripcionProductos[$i] . " - UNIDADES";
+    $importe[$i] = $cantidadProductos[$i] * $precioProductos[$i];
+    $total += $importe[$i];
+}
+
 $igv = $total * 18/100;
 $gravada = $total- $igv;
-/*
+
 $fmt = new NumberFormatter("es_PE", NumberFormatter::SPELLOUT);
-$parte_entera = intval($montoTotal);
-$parte_decimal = intval(($montoTotal - $parte_entera) * 100);
+$parte_entera = intval($total);
+$parte_decimal = intval(($total - $parte_entera) * 100);
 
 $texto_parte_entera = $fmt->format($parte_entera);
 $texto_parte_entera = strtoupper($texto_parte_entera);
 
-$textoMontoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . $tipoMoneda;
+$textoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . "SOLES";
 
-*/
+
 ob_start();
 
 require_once "../view/reports/recibo-factura.php";
@@ -47,9 +53,7 @@ $dompdf->set_base_path("reportes.css");
 
 $options = $dompdf->getOptions();
 $options->set(array("isRemoteEnabled" => true));
-$options->setDpi(72);
-$dompdf->setOptions($options);
 $dompdf->loadHtml($html);
-$dompdf->setPaper(array(0,0,408,850));
+$dompdf->setPaper(array(0,0,204,850));
 $dompdf->render();
 $dompdf->stream("recibo_honorarios.pdf", array("Attachment" => false));
