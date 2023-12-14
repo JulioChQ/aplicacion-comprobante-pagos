@@ -1,6 +1,8 @@
 <?php
 require_once "../lib/dompdf/autoload.inc.php";
 use Dompdf\Dompdf;
+include "../lib/barcode/barcode.php";
+
 date_default_timezone_set('America/Lima');
 setlocale(LC_ALL, 'es_ES');
 
@@ -38,9 +40,11 @@ $texto_parte_entera = strtoupper($texto_parte_entera);
 
 $textoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . "SOLES";
 
-
+$qrTexto = "|sdfadsadsad";
+$generator = new barcode_generator();
+$svg = $generator->render_image("qr", $qrTexto,"");
+//echo $svg;
 ob_start();
-
 require_once "../view/reports/recibo-factura.php";
 
 $html = ob_get_clean();
