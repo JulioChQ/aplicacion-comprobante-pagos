@@ -42,8 +42,12 @@ $textoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . "SOL
 
 $qrTexto = "|sdfadsadsad";
 $generator = new barcode_generator();
-$svg = $generator->render_image("qr", $qrTexto,"");
-//echo $svg;
+
+$svg = $generator->render_svg("qr", $qrTexto, "");
+
+//$svg = $generator->render_image("qr", $qrTexto,"");
+echo $svg;
+var_dump($svg);
 ob_start();
 require_once "../view/reports/recibo-factura.php";
 

@@ -102,7 +102,7 @@
          <div class="col-xs-12">
             <p>IMPORTE EN LETRAS: SON <?=$textoTotal?></p>
             <p>Representación impresa de la Factura Electrónica.</p>
-            <?= $svg;?>
+            
             <p>VENDEDOR: CAJERO PRINCIPAL</p>
          </div>
       </div>
