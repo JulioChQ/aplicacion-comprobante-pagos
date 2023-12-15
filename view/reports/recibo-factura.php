@@ -15,11 +15,11 @@
       margin-left: 1% !important;
       padding: 1px !important;
       font-size: 94% !important;
-      
-      
+
+
    }
 
-   tbody{
+   tbody {
       font-size: 90%;
       padding-right: 2% !important;
    }
@@ -50,11 +50,11 @@
          <div class="col-xs-12">
             <h4><b>FACTURA ELECTRÓNICA</b></h4>
             <h4>F001 - 000001</h4>
-            <h5>Fecha de emisión: <?=$fechaEmision?></h5>
-            <H5>Señor (es): <?=$razonSocial?></H5>
-            <h5>RUC N°: <?=$numDoc?></h5>
-            <h5>Direc.: <?=$domicilio?></h5>
-            <h5>MEDIO DE PAGO: <?=$medioPago?></h5>
+            <h5>Fecha de emisión: <?= $fechaEmision ?></h5>
+            <H5>Señor (es): <?= $razonSocial ?></H5>
+            <h5>RUC N°: <?= $numDoc ?></h5>
+            <h5>Direc.: <?= $domicilio ?></h5>
+            <h5>MEDIO DE PAGO: <?= $medioPago ?></h5>
             <h5>FORMA DE PAGO: AL CONTADO</h5>
          </div>
       </div><br>
@@ -71,14 +71,14 @@
                </thead>
                <tbody>
                   <?php
-                  for ($i=0;$i < count($idProductos); $i++){
+                  for ($i = 0; $i < count($idProductos); $i++) {
                   ?>
-                  <tr>
-                     <td><?=$cantidadProductos[$i]?></td>
-                     <td><?=$descripcionProductos[$i]?></td>
-                     <td><?=$precioProductos[$i]?></td>
-                     <td><?php echo "S/. " . $importe[$i]?></td>
-                  </tr>
+                     <tr>
+                        <td><?= $cantidadProductos[$i] ?></td>
+                        <td><?= $descripcionProductos[$i] ?></td>
+                        <td><?= $precioProductos[$i] ?></td>
+                        <td><?php echo "S/. " . $importe[$i] ?></td>
+                     </tr>
                   <?php
                   }
                   ?>
@@ -87,25 +87,25 @@
             </table>
          </div>
 
-         
+
       </div>
 
       <div class="row">
-      <div class="col-xs-12 text-right">
-            <h5>GRAVADA: S/. <?=$gravada?></h5>
-            <h5>IGV (18.00%): S/. <?=$igv?></h5>
-            <h5>TOTAL: S/. <?=$total?></h5>
+         <div class="col-xs-12 text-right">
+            <h5>GRAVADA: S/. <?= $gravada ?></h5>
+            <h5>IGV (18.00%): S/. <?= $igv ?></h5>
+            <h5>TOTAL: S/. <?= $total ?></h5>
          </div>
       </div>
 
       <div class="row contenido text-center">
          <div class="col-xs-12">
-            <p>IMPORTE EN LETRAS: SON <?=$textoTotal?></p>
+            <p>IMPORTE EN LETRAS: SON <?= $textoTotal ?></p>
             <img src="data:image/svg+xml;base64,<?php echo base64_encode($svg); ?>" alt="Imagen SVG">
             <?php
-            if($observacion != ""){
+            if ($observacion != "") {
             ?>
-            <p><b>Observación: </b><?=$observacion?></p>
+               <p><b>Observación: </b><?= $observacion ?></p>
             <?php
             }
             ?>
@@ -117,7 +117,7 @@
          </div>
       </div>
 
-     
+
 
    </div>
 
