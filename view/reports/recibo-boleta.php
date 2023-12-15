@@ -3,7 +3,7 @@
 
 <head>
 
-   <title>Factura de Venta | Sistema</title>
+   <title>Boleta de Venta | Sistema</title>
 
    <link rel='stylesheet' type="text/css" href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
@@ -48,11 +48,11 @@
       </div>
       <div class="row contenido">
          <div class="col-xs-12">
-            <h4><b>FACTURA ELECTRÓNICA</b></h4>
-            <h4>F001 - 000001</h4>
+            <h4><b>BOLETA ELECTRÓNICA</b></h4>
+            <h4>B001 - 000001</h4>
             <h5>Fecha de emisión: <?=$fechaEmision?></h5>
             <H5>Señor (es): <?=$razonSocial?></H5>
-            <h5>RUC N°: <?=$numDoc?></h5>
+            <h5><?=$tipoDoc?> N°: <?=$numDoc?></h5>
             <h5>Direc.: <?=$domicilio?></h5>
             <h5>MEDIO DE PAGO: <?=$medioPago?></h5>
             <h5>FORMA DE PAGO: AL CONTADO</h5>
@@ -109,7 +109,7 @@
             <?php
             }
             ?>
-            <p>Representación impresa de la Factura Electrónica.</p>
+            <p>Representación impresa de la Boleta Electrónica.</p>
             <p>Consulte su documento en:</p>
             <p>https://emisor-cpe.pe/consultar-cpe</p>
             <p>HASH: udQeHMKjAPrWkmfEUKj+4vVX1N4=</p>

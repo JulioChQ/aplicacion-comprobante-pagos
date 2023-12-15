@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emisión de Factura de Venta | Sistema</title>
+    <title>Emisión de Boleta de Venta Electrónica | Sistema</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
@@ -20,9 +20,9 @@
             <div class="row text-center titulo">
                 <div class="col">
                     <br>
-                    <h3 id="titulo"><b>Emisión de Factura de Venta</b></h3>
+                    <h3 id="titulo"><b>Emisión de Boleta de Venta Electrónica</b></h3>
                     <p>
-                        Aquí puedes generar una Factura de Venta.
+                        Aquí puedes generar una Boleta de Venta Electrónica.
                     </p>
                 </div>
             </div>
@@ -31,12 +31,12 @@
 
 
 
-            <form action="controller/emitir-factura.php" method="POST" target="_blank" id="formulario">
+            <form action="controller/emitir-boleta.php" method="POST" target="_blank" id="formulario">
                 <div class="row datos">
                     <h5><b>Datos del Cliente</b></h5>
                     <div class="col-xl-2 col-md-3">
                         <label for="tipo-documento"><b>Tipo de Documento</b></label><br>
-                        <select class="form-select" name="tipo-documento" id="tipo-documento" onchange="cambiarDocumento()" disabled>
+                        <select class="form-select" name="tipo-documento" id="tipo-documento" onchange="cambiarDocumento()">
                             <option value="Sin Documento">Sin Documento</option>
                             <option value="RUC" selected>RUC</option>
                             <option value="DNI">DNI</option>
@@ -218,7 +218,7 @@
 
     </footer>
 
-    <script src="view/js/formulario-factura.js"></script>
+    <script src="view/js/formulario-boleta.js"></script>
 
 
 </body>

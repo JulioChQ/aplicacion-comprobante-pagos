@@ -7,8 +7,14 @@ date_default_timezone_set('America/Lima');
 setlocale(LC_ALL, 'es_ES');
 
 
-//$tipoDoc = $_POST["tipo-documento"];
-$tipoDoc = "DNI";
+$tipoDoc = $_POST["tipo-documento"];
+
+if($tipoDoc == "RUC"){
+    $codTipoDoc = 6;
+}else{
+    $codTipoDoc = 1;
+}
+
 $numDoc = $_POST["numero-documento"];
 $razonSocial = $_POST["razon-social"];
 $domicilio = $_POST["domicilio"];
@@ -42,14 +48,14 @@ $texto_parte_entera = strtoupper($texto_parte_entera);
 
 $textoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . "SOLES";
 
-$qrTexto =  "20123456789|01|F001|1|" . $igv . "|" . $total . "|" . $fechaEmision . "|6|" . $numDoc;
+$qrTexto =  "20123456789|03|B001|1|" . $igv . "|" . $total . "|" . $fechaEmision . "|" . $codTipoDoc . "|" . $numDoc;
 $generator = new barcode_generator();
 
 $svg = $generator->render_svg("qr", $qrTexto, "");
 
 
 ob_start();
-require_once "../view/reports/recibo-factura.php";
+require_once "../view/reports/recibo-boleta.php";
 
 $html = ob_get_clean();
 
@@ -64,4 +70,4 @@ $options->set(array("isRemoteEnabled" => true));
 $dompdf->loadHtml($html);
 $dompdf->setPaper(array(0,0,204,850));
 $dompdf->render();
-$dompdf->stream("factura.pdf", array("Attachment" => false));
+$dompdf->stream("boleta.pdf", array("Attachment" => false));

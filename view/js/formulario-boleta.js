@@ -166,7 +166,7 @@ formulario.addEventListener("submit", function (event) {
     var moneda = document.getElementById("tipo-moneda").value;
 
     // Muestra una alerta de confirmación
-    var mensaje = "¿Estás seguro de que deseas EMITIR esta Factura Electrónica por un MONTO TOTAL de " + total + " " + moneda + " y con un IGV de " + igv + " " + moneda + " ?";
+    var mensaje = "¿Estás seguro de que deseas EMITIR esta Boleta Electrónica por un MONTO TOTAL de " + total + " " + moneda + " y con un IGV de " + igv + " " + moneda + " ?";
 
     var confirmacion = confirm(mensaje);
 
@@ -176,3 +176,9 @@ formulario.addEventListener("submit", function (event) {
         event.preventDefault(); // Detener el envío del formulario
     }
 });
+
+function cambiarDocumento(){
+    document.getElementById("numero-documento").value = "";
+    document.getElementById("razon-social").value = "";
+    document.getElementById("domicilio").value = "";
+}
