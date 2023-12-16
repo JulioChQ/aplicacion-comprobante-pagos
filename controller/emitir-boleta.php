@@ -68,6 +68,6 @@ $dompdf->set_base_path("reportes.css");
 $options = $dompdf->getOptions();
 $options->set(array("isRemoteEnabled" => true));
 $dompdf->loadHtml($html);
-$dompdf->setPaper(array(0,0,204,850));
+$dompdf->setPaper(array(0,0,204,950));
 $dompdf->render();
 $dompdf->stream("boleta.pdf", array("Attachment" => false));
