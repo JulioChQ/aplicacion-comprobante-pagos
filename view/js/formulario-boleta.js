@@ -70,7 +70,7 @@ function actualizarResumen() {
             total += precio;
         }
     }
-    var igv = total * (18/100);
+    var igv = (total / (1 + 18/100)) * 18/100;
     var gravada = total - igv;
 
     document.getElementById("gravada").value = gravada.toFixed(2);
@@ -130,8 +130,8 @@ function agregarProducto() {
     campoOculto4.value = cantidad;
     cell6.appendChild(campoOculto4);
 
-    cell7.innerHTML = (precio * cantidad - (cantidad * precio) * 18 / 100).toFixed(2);
-    cell8.innerHTML = ((cantidad * precio) * 18 / 100).toFixed(2);
+    cell7.innerHTML = (precio * cantidad - (precio*cantidad / (1 + 18/100)) * 18/100).toFixed(2);
+    cell8.innerHTML = ((precio*cantidad / (1 + 18/100)) * 18 / 100).toFixed(2);
     cell9.innerHTML = precio * cantidad;
     cell10.innerHTML = '<p class="btn btn-danger" onclick="eliminarProducto(this)">Quitar</p>';
 

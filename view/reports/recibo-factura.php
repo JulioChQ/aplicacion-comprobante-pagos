@@ -92,8 +92,8 @@
 
       <div class="row">
          <div class="col-xs-12 text-right">
-            <h5>GRAVADA: S/. <?= $gravada ?></h5>
-            <h5>IGV (18.00%): S/. <?= $igv ?></h5>
+            <h5>GRAVADA: S/. <?= round($gravada, 2) ?></h5>
+            <h5>IGV (18.00%): S/. <?= round($igv, 2) ?></h5>
             <h5>TOTAL: S/. <?= $total ?></h5>
          </div>
       </div>
@@ -111,7 +111,7 @@
             ?>
             <p>Representación impresa de la Factura Electrónica.</p>
             <p>Consulte su documento en:</p>
-            <p>https://emisor-cpe.pe/consultar-cpe</p>
+            <p>https://comprobantesrayo.pe/consultar-cpe</p>
             <p>HASH: udQeHMKjAPrWkmfEUKj+4vVX1N4=</p>
             <p>VENDEDOR: CAJERO PRINCIPAL</p>
          </div>

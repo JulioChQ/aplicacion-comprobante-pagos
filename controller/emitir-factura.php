@@ -30,7 +30,7 @@ for($i=0; $i < count($idProductos); $i++){
     $total += $importe[$i];
 }
 
-$igv = $total * 18/100;
+$igv = ($total / (1 + 18/100)) * 18/100;
 $gravada = $total- $igv;
 
 $fmt = new NumberFormatter("es_PE", NumberFormatter::SPELLOUT);
@@ -42,7 +42,7 @@ $texto_parte_entera = strtoupper($texto_parte_entera);
 
 $textoTotal = "" . $texto_parte_entera . " Y " . $parte_decimal . "/100 " . "SOLES";
 
-$qrTexto =  "20123456789|01|F001|1|" . $igv . "|" . $total . "|" . $fechaEmision . "|6|" . $numDoc;
+$qrTexto =  "20123456789|01|F001|1|" . round($igv,2) . "|" . $total . "|" . $fechaEmision . "|6|" . $numDoc;
 $generator = new barcode_generator();
 
 $svg = $generator->render_svg("qr", $qrTexto, "");
