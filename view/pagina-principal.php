@@ -766,6 +766,36 @@
             </div>
           </div>
         </div>
+
+        <div class="w-full md:w-1/3 p-6 flex flex-col flex-grow flex-shrink">
+          <div
+            class="flex-1 bg-white rounded-t rounded-b-none overflow-hidden shadow"
+          >
+            <a href="index.php?p=remision" class="flex flex-wrap no-underline hover:no-underline">
+              <p class="w-full text-gray-600 text-xs md:text-sm px-6 mt-6">
+                COMIENCE A EMITIR
+              </p>
+              <div class="w-full font-bold text-xl text-gray-800 px-6">
+                Guía de Remisión Remitente
+              </div>
+              <p class=" text-gray-600 text-base px-6 mb-5">
+                Si eres un trabajador independiente, debes emitir tus recibos por honorarios electrónicos 
+                cuando alguien pague por tus servicios personales.
+              </p>
+            </a>
+          </div>
+          <div
+            class="flex-none mt-auto bg-white rounded-b rounded-t-none overflow-hidden shadow p-6"
+          >
+            <div class="flex items-center justify-end">
+              <a href="index.php?p=remision"
+                class="mx-auto lg:mx-0 hover:underline gradient2 text-gray-800 font-extrabold rounded my-6 py-4 px-8 shadow-lg"
+              >
+                Emitir
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 

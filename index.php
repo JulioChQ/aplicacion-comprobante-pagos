@@ -18,5 +18,8 @@ if (!isset($_GET["p"])) {
         case "factura":
             require_once "view/formulario-factura.php";
             break;
+        case "remision":
+            require_once "view/formulario-remision.php";
+            break;
     }
 }
