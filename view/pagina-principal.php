@@ -118,21 +118,28 @@
               <a
                 class="inline-block py-2 px-4 text-black font-bold no-underline"
                 href="index.php?p=factura"
-                >Emitir factura</a
+                >Factura</a
               >
             </li>
             <li class="mr-3">
               <a
                 class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                 href="index.php?p=boleta"
-                >Emitir boleta de venta</a
+                >Boleta</a
               >
             </li>
             <li class="mr-3">
               <a
                 class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
                 href="index.php?p=recibo"
-                >Emitir recibo por Honorarios</a
+                >Recibo por Honorarios</a
+              >
+            </li>
+            <li class="mr-3">
+              <a
+                class="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
+                href="index.php?p=remision"
+                >Guía de Remisión Remitente</a
               >
             </li>
           </ul>
