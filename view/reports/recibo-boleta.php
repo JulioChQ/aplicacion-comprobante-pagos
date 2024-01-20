@@ -40,7 +40,7 @@
    <div class="container-fluid">
       <div class="row text-center">
          <div class="col-xs-12 text-center">
-            <h4>IMPORTACIONES MI DULCE HOGAR</h4>
+            <h4>IMPORTACIONES MI DULCE HOGAR S.A.C.</h4>
             <h4>R.U.C. 20123456789</h4>
             <p>CALLE 2 DE MAYO 1001 TACNA - TACNA - TACNA</p>
             <p>TELEFONO: 123456789</p>

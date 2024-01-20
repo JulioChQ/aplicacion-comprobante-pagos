@@ -200,7 +200,7 @@
                 <div class="row text-center">
                     <div class="col-12">
                         <input type="submit" name="emitir-recibo" class="btn btn-primary" value="Emitir Comprobante" id="generar">
-                        <a class="btn btn-secondary" href="index.php">Eliminar Datos</a>
+                        <a class="btn btn-secondary" href="index.php?p=factura">Eliminar Datos</a>
 
                     </div>
 

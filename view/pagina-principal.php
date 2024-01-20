@@ -786,8 +786,7 @@
                 Guía de Remisión Remitente
               </div>
               <p class=" text-gray-600 text-base px-6 mb-5">
-                Si eres un trabajador independiente, debes emitir tus recibos por honorarios electrónicos 
-                cuando alguien pague por tus servicios personales.
+              La guía de remisión es un documento que sirve para sustentar el traslado de bienes desde un lugar hacia otro, como un almacén, depósito o establecimiento, y es de uso obligatorio exigido por la Sunat.
               </p>
             </a>
           </div>
