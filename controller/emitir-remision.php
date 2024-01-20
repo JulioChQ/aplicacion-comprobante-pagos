@@ -37,6 +37,7 @@ $fechaEmision = date("d-m-Y");
 $idProductos = $_POST["id-productos"];
 $descripcionProductos = $_POST["descripcion-productos"];
 $cantidadProductos = $_POST["cantidad-productos"];
+$unidadProductos = $_POST["unidad-medida"];
 
 for($i=0; $i < count($idProductos); $i++){
     $descripcionProductos[$i] = $idProductos[$i] . " - " . $descripcionProductos[$i];
@@ -49,7 +50,7 @@ $fechaTraslado = $_POST["fecha-traslado"];
 $fechaTraslado = date("d-m-Y",strtotime($fechaTraslado));
 
 # Generación de QR
-$qrTexto =  "20123456789|01|T001|1|||" . $fechaEmision . "|6|" . $numDoc;
+$qrTexto =  "20123456789|09|T001|1|||" . $fechaEmision . "|6|" . $numDoc;
 $generator = new barcode_generator();
 $svg = $generator->render_svg("qr", $qrTexto, "");
 

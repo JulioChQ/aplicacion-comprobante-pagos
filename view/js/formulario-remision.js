@@ -21,6 +21,7 @@ $("#validar").click(function () {
                         document.getElementById("razon-social").value = data.razonSocial;
                         let domicilio = "" + data.direccion + " " + data.departamento + " - " + data.provincia + " - " + data.distrito + "";
                         document.getElementById("domicilio").value = domicilio;
+                        document.getElementById("direccion-llegada").value = domicilio;
 
                     }
                 }
@@ -63,6 +64,7 @@ function agregarProducto() {
     let id = document.getElementById("id-producto").value;
     let descripcion = document.getElementById("descripcion-producto").value;
     let cantidad = document.getElementById("cantidad-producto").value;
+    let unidad = document.getElementById("unidad-medida").value;
 
     var listaProductos = document.getElementById("lista-productos").getElementsByTagName("tbody")[0];
 
@@ -89,15 +91,19 @@ function agregarProducto() {
     campoOculto2.value = descripcion;
     cell2.appendChild(campoOculto2)
 
-    cell3.innerHTML = "UNIDADES";
-    
-
-    cell4.innerHTML = cantidad;
+    cell3.innerHTML = unidad;
     var campoOculto3 = document.createElement("input");
     campoOculto3.type = "hidden";
-    campoOculto3.name = "cantidad-productos[]";
-    campoOculto3.value = cantidad;
-    cell4.appendChild(campoOculto3);
+    campoOculto3.name = "unidad-medida[]";
+    campoOculto3.value = unidad;
+    cell3.appendChild(campoOculto3)
+
+    cell4.innerHTML = cantidad;
+    var campoOculto4 = document.createElement("input");
+    campoOculto4.type = "hidden";
+    campoOculto4.name = "cantidad-productos[]";
+    campoOculto4.value = cantidad;
+    cell4.appendChild(campoOculto4);
 
     
     cell5.innerHTML = '<p class="btn btn-danger" onclick="eliminarProducto(this)">Quitar</p>';

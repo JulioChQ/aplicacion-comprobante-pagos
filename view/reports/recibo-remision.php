@@ -162,7 +162,7 @@
                      <tr>
                         <td><?= $cantidadProductos[$i] ?></td>
                         <td><?= $descripcionProductos[$i] ?></td>
-                        <td><?= "UNIDADES" ?></td>
+                        <td><?=$unidadProductos[$i] ?></td>
                      </tr>
                   <?php
                   }
@@ -179,7 +179,7 @@
             <img src="data:image/svg+xml;base64,<?php echo base64_encode($svg); ?>" alt="Imagen SVG">
          </div>
          <div class="col-xs-8 text-center">
-            <br><p>Representación impresa de la Factura Electrónica.</p>
+            <br><p>Representación impresa de la Guía de Remisión Remitente Electrónica.</p>
             <p>Consulte su documento en:</p>
             <p>https://comprobantesrayo.pe/consultar-cpe</p>
             <p>VENDEDOR: CAJERO PRINCIPAL</p>

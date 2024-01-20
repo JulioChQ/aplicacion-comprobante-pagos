@@ -44,7 +44,7 @@
 
                     <div class="col-xl-3 col-md-3">
                         <label for="numero-documento-sunat"><b>Serie y Número</b></label><br>
-                        <input type="text" class="input-recibo" id="numero-documento-sunat" name="numero-documento-sunat" placeholder="Ejemplo: F001-1" required>
+                        <input type="text" class="input-recibo" id="numero-documento-sunat" name="numero-documento-sunat" placeholder="Ejemplo: F001-1">
                     </div>
 
                     <div class="col-xl-6 col-md-6">
@@ -69,7 +69,7 @@
                     <h5><b>Datos del Destinatario</b></h5>
                     <div class="col-xl-1 col-md-2">
                         <label for="tipo-documento"><b>Tipo de Documento</b></label><br>
-                        <select class="form-select" name="tipo-documento" id="tipo-documento" onchange="cambiarDocumento()" disabled>
+                        <select class="form-select" name="tipo-documento" id="tipo-documento" onchange="cambiarDocumento()">
                             <option value="Sin Documento">Sin Documento</option>
                             <option value="RUC" selected>RUC</option>
                             <option value="DNI">DNI</option>
@@ -84,7 +84,7 @@
                     </div>
                     <div class="col-xl-4 col-md-7">
                         <label for="razon-social"><b>Nombre o Razón Social</b></label><br>
-                        <input type="text" class="input-recibo" id="razon-social" name="razon-social" placeholder="Ingrese razón social de la empresa o nombre de la persona" required>
+                        <input type="text" class="input-recibo" id="razon-social" name="razon-social" placeholder="Ingrese razón social de la empresa o nombre de la persona">
                     </div>
 
                     <div class="col-xl-5 col-md-12">
@@ -112,7 +112,7 @@
                     </div>
                     <div class="col-xl-4 col-md-7">
                         <label for="nombre-conductor"><b>Nombres y Apellidos</b></label><br>
-                        <input type="text" class="input-recibo" id="nombre-conductor" name="nombre-conductor" placeholder="Ingrese nombre del conductor" required>
+                        <input type="text" class="input-recibo" id="nombre-conductor" name="nombre-conductor" placeholder="Ingrese nombre del conductor">
                     </div>
 
                     <div class="col-xl-2 col-md-6">
@@ -136,12 +136,12 @@
                     <div class="col-xl-6 col-md-12">
                         <label for="direccion-partida"><b>Dirección de Partida</b></label><br>
                         <input type="text" class="input-recibo" id="direccion-partida" name="direccion-partida" value="CALLE 2 DE MAYO 1001 TACNA - TACNA -
-TACNA">
+TACNA" required>
                     </div>
 
                     <div class="col-xl-6 col-md-12">
                         <label for="direccion-llegada"><b>Dirección de Llegada</b></label><br>
-                        <input type="text" class="input-recibo" id="direccion-llegada" name="direccion-llegada">
+                        <input type="text" class="input-recibo" id="direccion-llegada" name="direccion-llegada" required>
                     </div>
                 </div><br>
 
@@ -155,9 +155,22 @@ TACNA">
                         <input type="text" class="input-recibo" id="id-producto" name="id-producto">
                     </div>
 
-                    <div class="col-xl-9 col-md-6">
+                    <div class="col-xl-9 col-md-5">
                         <label for="descripcion-producto"><b>Descripción</b></label><br>
                         <input type="text" class="input-recibo" id="descripcion-producto" name="descripcion-producto">
+                    </div>
+
+                    <div class="col-xl-2 col-md-3">
+                        <label for="unidad-medida"><b>Unidad/Medida</b></label><br>
+                        <select class="form-select" name="unidad-medida" id="unidad-medida">
+                            <option value="UNIDADES">UNIDADES</option>
+                            <option value="CAJAS">CAJAS</option>
+                            <option value="DOCENA">DOCENA</option>
+                            <option value="JUEGO">JUEGO</option>
+                            <option value="LITROS">LITROS</option>
+                            <option value="KILOGRAMOS">KILOGRAMOS</option>
+                            <option value="METROS">METROS</option>
+                        </select>
                     </div>
 
                     <div class="col-xl-1 col-md-2">
@@ -167,7 +180,7 @@ TACNA">
 
                     
 
-                    <div class="col-xl-1 col-md-2 text-center">
+                    <div class="col-xl-1 col-md-12 text-center">
                         <a class="btn btn-success" onclick="agregarProducto()">Agregar</a>
                     </div>
 
@@ -197,7 +210,7 @@ TACNA">
 
                     <div class="col-xl-3 col-md-4">
                         <label for="peso-carga"><b>Peso Bruto Total de la Carga (KGM)</b></label><br>
-                        <input type="number" class="input-recibo" id="peso-carga" name="peso-carga" step="0.01">
+                        <input type="number" class="input-recibo" id="peso-carga" name="peso-carga" step="0.01" required>
                     </div>
 
                     <div class="col-xl-4 col-md-4">
